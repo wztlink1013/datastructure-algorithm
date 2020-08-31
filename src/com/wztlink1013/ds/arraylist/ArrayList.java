@@ -14,10 +14,6 @@ public class ArrayList<E> {
     private static final int DEFAULT_CAPACITY = 10;
     private static final int ELEMENT_NOT_FOUND = -1;
 
-    /**
-     * 构造函数
-     * @param capaticy
-     */
     public ArrayList(int capaticy) {
         capaticy = (capaticy < DEFAULT_CAPACITY) ? DEFAULT_CAPACITY : capaticy;
         elements = (E[]) new Object[capaticy];
@@ -27,6 +23,14 @@ public class ArrayList<E> {
         this(DEFAULT_CAPACITY);
     }
 
+    public int search(E element){
+        for (int i = 0;i<size;i++){
+            if (element == elements[i]){
+                return i;
+            }
+        }
+        return ELEMENT_NOT_FOUND;
+    }
     /**
      * 清除所有元素
      */
@@ -157,7 +161,6 @@ public class ArrayList<E> {
 //	}
 
     /**
-     * 不太懂~
      * 保证要有capacity的容量
      * @param capacity
      */

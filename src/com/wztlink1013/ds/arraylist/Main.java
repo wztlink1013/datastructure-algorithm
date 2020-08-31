@@ -1,5 +1,8 @@
 package com.wztlink1013.ds.arraylist;
 
+/**
+ * 作用：主函数测试接口
+ */
 
 public class Main {
 
@@ -45,3 +48,5 @@ public class Main {
         System.out.println(ints);
     }
 }
+
+
