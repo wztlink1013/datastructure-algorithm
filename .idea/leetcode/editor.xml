@@ -3,6 +3,46 @@
   <component name="LeetcodeEditor">
     <option name="projectConfig">
       <map>
+        <entry key="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/P1TwoSum.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/P1TwoSum.java" />
+              <option name="questionId" value="1" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/P1两数之和  .java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/P1两数之和  .java" />
+              <option name="questionId" value="1" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/P486PredictTheWinner.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/P486PredictTheWinner.java" />
+              <option name="questionId" value="486" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/TwoSum  .java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/TwoSum  .java" />
+              <option name="questionId" value="1" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/TwoSum.java">
+          <value>
+            <LeetcodeEditor>
+              <option name="path" value="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/TwoSum.java" />
+              <option name="questionId" value="1" />
+            </LeetcodeEditor>
+          </value>
+        </entry>
         <entry key="$PROJECT_DIR$/src/com/wztlink1013/problems/leetcode/editor/cn/[1]两数之和.java">
           <value>
             <LeetcodeEditor>
