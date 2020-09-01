@@ -7,10 +7,10 @@ public class Main {
     }
     public static boolean PredictTheWinner(int[] num){
         int first;
-        if (num[0] >= num[num.length]){
+        if (num[0] >= num[num.length-1]){
             first = num[0];
         }else{
-            first = num[num.length];
+            first = num[num.length-1];
         }
 
         return true;
