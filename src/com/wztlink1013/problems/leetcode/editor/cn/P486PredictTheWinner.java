@@ -57,6 +57,11 @@ class Solution {
         int scoreStart = nums[start] * turn + total(nums, start + 1, end, -turn);
         int scoreEnd = nums[end] * turn + total(nums, start, end - 1, -turn);
         return Math.max(scoreStart * turn, scoreEnd * turn) * turn;
+//        if(turn == 1){
+//            return Math.max(scoreStart ,scoreEnd );
+//        }else{
+//            return Math.min(scoreStart ,scoreEnd );
+//        }
     }
 }
 
