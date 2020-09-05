@@ -2,9 +2,6 @@ package com.wztlink1013.ds.linkedlist;
 
 @SuppressWarnings("unchecked")
 public class ArrayList<E> extends AbstractList<E> {
-    /**
-     * 所有的元素
-     */
     private E[] elements;
 
     private static final int DEFAULT_CAPACITY = 10;
