@@ -32,9 +32,37 @@ public class P83RemoveDuplicatesFromSortedList{
  */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
-
+        // TODO: 快慢指针
+        if (head == null) return head;
+        ListNode slow = head;
+        ListNode fast = head.next;
+        while (fast != null){
+            if (slow.val != fast.val) {
+                slow.next = fast;
+                slow = fast;
+            }
+            fast = fast.next;
+        }
+        slow.next = null;
+        return head;
     }
 }
+// TODO: 单指针下一步
+//class Solution {
+//    public ListNode deleteDuplicates(ListNode head) {
+//        ListNode cur = head;
+//        while(cur != null && cur.next != null) {
+//            if(cur.val == cur.next.val) {
+//                cur.next = cur.next.next;
+//            } else {
+//                cur = cur.next;
+//            }
+//        }
+//        return head;
+//    }
+//}
+
+
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

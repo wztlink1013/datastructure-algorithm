@@ -1,12 +1,5 @@
-## 数据结构
-[数据结构](./note/datastructure)
-## 算法分析与设计
-[算法分析与设计](./note/algorithm)
-## 编程刷题
-[编程刷题](./src/com/wztlink1013/problems/leetcode/editor/cn)
-## JAVA知识
-[java知识](./note/java)
+欢迎访问我的技术博客，学习笔记 [https://blog.wztlink1013.com](https://blog.wztlink1013.com)
 
-
+> 数据结构，算法分析与设计，编程刷题，JAVA知识
 
 

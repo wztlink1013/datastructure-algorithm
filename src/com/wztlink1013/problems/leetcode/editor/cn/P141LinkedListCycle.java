@@ -46,14 +46,6 @@ public class P141LinkedListCycle{
         Solution solution = new P141LinkedListCycle().new Solution();
         
     }
-class ListNode {
-int val;
-ListNode next;
-ListNode(int x) {
-val = x;
-next = null;
-}
-}
 //leetcode submit region begin(Prohibit modification and deletion)
 /**
  * Definition for singly-linked list.
