@@ -41,13 +41,17 @@ public class P18FourSum{
 class Solution {
     public List<List<Integer>> fourSum(int[] nums, int target) {
         List<List<Integer>> result = new LinkedList<>();
-        for (int i=nums[0];i<nums.length;i++){
-            for (int j=nums[1];j<nums.length;j++){
-                for (int k=nums[2];k<nums.length;k++){
-                    for (int l=nums[3];l<nums.length;l++){
+        int a = 0;
+        int b = 1;
+        int c = 2;
+        int d = 3;
+        for (int i=nums[a];i<nums.length;++a){
+            for (int j=nums[b];j<nums.length;++b){
+                for (int k=nums[c];k<nums.length;++c){
+                    for (int l=nums[d];l<nums.length;++d){
                         if (i+j+k+l == target){
                             result.add(new LinkedList<>(Arrays.asList(i, j, k, l)));
-                        }
+                        }break;
                     }
                 }
             }
