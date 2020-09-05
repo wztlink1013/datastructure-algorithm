@@ -74,9 +74,9 @@ public class Solution {
         ListNode slow = head;
         ListNode fast = head.next;
         while (fast != null && fast.next != null) {
-            if (slow == fast) return true; //如果能相遇则表示有环
             slow = slow.next;
             fast = fast.next.next;
+            if (slow == fast) return true; //如果能相遇则表示有环
         }
         return false; //不能相遇则没有环
     }
