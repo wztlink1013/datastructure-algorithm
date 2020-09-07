@@ -10,6 +10,8 @@ package com.wztlink1013.problems.leetcode.editor.cn;
 // Related Topics 链表 
 // 👍 438 👎 0
 
+import com.wztlink1013.ds.linkedlist.LinkedList;
+
 public class P203RemoveLinkedListElements{
     public static void main(String[] args) {
         Solution solution = new P203RemoveLinkedListElements().new Solution();
@@ -27,17 +29,16 @@ public class P203RemoveLinkedListElements{
  */
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
-        if (head.val == val) {
-            head = head.next;
-        }
-        while (head.next != null && head.next.next != null){
-            if (head.next.val == val) {
-                head = head.next.next;
-            }
-        }
-        return head;
+        // 将整个链表想象成head+子链表
+        if (head == null)
+            return null;
+        // 先处理子链表
+        head.next = removeElements(head.next, val);
+        // 再处理头结点
+        return head.val == val ? head.next : head;
     }
 }
+
 //leetcode submit region end(Prohibit modification and deletion)
 
 }
