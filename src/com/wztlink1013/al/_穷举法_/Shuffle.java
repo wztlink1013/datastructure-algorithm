@@ -1,7 +1,8 @@
 package com.wztlink1013.al._穷举法_;
-/*
+
+/**
 * 作用：洗牌算法
-* */
+**/
 
 import java.util.Scanner;
 import java.util.Random;
