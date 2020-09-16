@@ -1,5 +1,5 @@
 package com.wztlink1013.al._穷举法_;
-/*
+/**
 * 作用：百元买百兔
 * */
 public class HundredRabbits {

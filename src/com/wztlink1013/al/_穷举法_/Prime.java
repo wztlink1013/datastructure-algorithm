@@ -1,5 +1,5 @@
 package com.wztlink1013.al._穷举法_;
-/*
+/**
 * 作用：素性测试
 * */
 import java.util.Scanner;

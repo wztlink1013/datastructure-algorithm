@@ -1,5 +1,9 @@
 package com.wztlink1013.al._穷举法_;
 
+/*
+* 测试Random包
+* */
+
 import java.util.Random;
 
 public class TestRandom {
