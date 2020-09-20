@@ -10,7 +10,7 @@ public class SubSetting {
     static int cnt = 0;
 
     public static void main(String args[]) {
-        int n = 22;
+        int n = 23;
         Times.test("当n = " + n + "时候的耗费时间", new Times.Task() {
             public void execute() {
                 Subsetting(n);
