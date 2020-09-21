@@ -1,5 +1,8 @@
 package com.wztlink1013.ds.linkedlist;
 
+/**
+ *fun：实现动态数组
+ */
 @SuppressWarnings("unchecked")
 public class ArrayList<E> extends AbstractList<E> {
     private E[] elements;
@@ -15,17 +18,6 @@ public class ArrayList<E> extends AbstractList<E> {
         this(DEFAULT_CAPACITY);
     }
 
-    /**
-    * 自己写的
-    */
-    public int search(E element){
-        for (int i = 0;i<size;i++){
-            if (element == elements[i]){
-                return i;
-            }
-        }
-        return ELEMENT_NOT_FOUND;
-    }
 
     @Override
     public void clear() {
@@ -125,4 +117,17 @@ public class ArrayList<E> extends AbstractList<E> {
         string.append("]");
         return string.toString();
     }
+
+    /**
+     * 新添加功能
+     */
+    public int search(E element){
+        for (int i = 0;i<size;i++){
+            if (element == elements[i]){
+                return i;
+            }
+        }
+        return ELEMENT_NOT_FOUND;
+    }
+
 }

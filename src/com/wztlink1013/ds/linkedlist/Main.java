@@ -1,5 +1,8 @@
 package com.wztlink1013.ds.linkedlist;
 
+/**
+ * fun：测试主函数
+ */
 public class Main {
     public static void main(String[] args){
         List<Integer> list = new ArrayList<>();

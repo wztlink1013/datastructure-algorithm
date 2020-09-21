@@ -1,5 +1,9 @@
 package com.wztlink1013.ds.linkedlist;
 
+/**
+ *fun：实现链表
+ */
+@SuppressWarnings("unchecked")
 public class LinkedList<E> extends AbstractList<E> {
     private Node<E> first;
     private Node<E> last;

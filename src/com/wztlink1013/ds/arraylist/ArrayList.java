@@ -1,5 +1,10 @@
 package com.wztlink1013.ds.arraylist;
 
+/**
+ * fun：动态数组的实现
+ */
+
+
 @SuppressWarnings("unchecked")
 public class ArrayList<E> {
     /**
