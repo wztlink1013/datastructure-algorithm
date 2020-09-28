@@ -1,8 +1,9 @@
 package com.wztlink1013.ds.times;
 
 /**
+ * fun：时间复杂度
  * 通过递归了解算法优劣
- * 测试一些代码时间复杂度
+ * 试一些代码时间复杂度
  */
 public class Main {
 

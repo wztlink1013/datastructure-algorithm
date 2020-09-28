@@ -1,7 +1,9 @@
 package com.wztlink1013.ds.times;
-/*
- * 作用：测量代码运行时间
+
+/**
+ * fun：测量代码运行时间
  */
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 

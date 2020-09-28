@@ -1,16 +1,12 @@
-package com.wztlink1013.ds.linkedlist;
+package com.wztlink1013.ds.linkedlist.single;
 
-/**
- *fun：链表的实现
- */
-@SuppressWarnings("unchecked")
-public class LinkedList<E> extends AbstractList<E> {
+import com.wztlink1013.ds.linkedlist.AbstractList;
+
+public class SingleLinkedList<E> extends AbstractList<E> {
     private Node<E> first;
-    private Node<E> last;
 
     private static class Node<E> {
         E element;
-        Node<E> prev;
         Node<E> next;
         public Node(E element, Node<E> next) {
             this.element = element;
@@ -22,16 +18,25 @@ public class LinkedList<E> extends AbstractList<E> {
     public void clear() {
         size = 0;
         first = null;
-        last = null;
     }
 
     @Override
     public E get(int index) {
+        /*
+         * 最好：O(1)
+         * 最坏：O(n)
+         * 平均：O(n)
+         */
         return node(index).element;
     }
 
     @Override
     public E set(int index, E element) {
+        /*
+         * 最好：O(1)
+         * 最坏：O(n)
+         * 平均：O(n)
+         */
         Node<E> node = node(index);
         E old = node.element;
         node.element = element;
@@ -40,7 +45,14 @@ public class LinkedList<E> extends AbstractList<E> {
 
     @Override
     public void add(int index, E element) {
-        if (index == 0){
+        /*
+         * 最好：O(1)
+         * 最坏：O(n)
+         * 平均：O(n)
+         */
+        rangeCheckForAdd(index);
+
+        if (index == 0) {
             first = new Node<>(element, first);
         } else {
             Node<E> prev = node(index - 1);
@@ -51,32 +63,21 @@ public class LinkedList<E> extends AbstractList<E> {
 
     @Override
     public E remove(int index) {
-//        Node<E> node = first;
-//        if (index == 0) {
-//            first = first.next;
-//        } else {
-//            Node<E> prev = node(index -1);
-//            node = prev.next;
-//            prev.next = node.next;
-//        }
+        /*
+         * 最好：O(1)
+         * 最坏：O(n)
+         * 平均：O(n)
+         */
         rangeCheck(index);
 
-        Node<E> node = node(index);
-        Node<E> prev = node.prev;
-        Node<E> next = node.next;
-
-        if (prev == null) { // index == 0
-            first = next;
+        Node<E> node = first;
+        if (index == 0) {
+            first = first.next;
         } else {
-            prev.next = next;
+            Node<E> prev = node(index - 1);
+            node = prev.next;
+            prev.next = node.next;
         }
-
-        if (next == null) { // index == size - 1
-            last = prev;
-        } else {
-            next.prev = prev;
-        }
-
         size--;
         return node.element;
     }
@@ -109,19 +110,11 @@ public class LinkedList<E> extends AbstractList<E> {
     private Node<E> node(int index) {
         rangeCheck(index);
 
-        if (index < (size >> 1)) {
-            Node<E> node = first;
-            for (int i = 0; i < index; i++) {
-                node = node.next;
-            }
-            return node;
-        } else {
-            Node<E> node = last;
-            for (int i = size - 1; i > index; i--) {
-                node = node.prev;
-            }
-            return node;
+        Node<E> node = first;
+        for (int i = 0; i < index; i++) {
+            node = node.next;
         }
+        return node;
     }
 
     @Override
@@ -134,11 +127,19 @@ public class LinkedList<E> extends AbstractList<E> {
                 string.append(", ");
             }
 
-            string.append(node);
+            string.append(node.element);
 
             node = node.next;
         }
         string.append("]");
+
+//		Node<E> node1 = first;
+//		while (node1 != null) {
+//
+//
+//			node1 = node1.next;
+//		}
         return string.toString();
     }
 }
+
