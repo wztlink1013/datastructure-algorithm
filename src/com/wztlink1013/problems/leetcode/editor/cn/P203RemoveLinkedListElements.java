@@ -10,8 +10,6 @@ package com.wztlink1013.problems.leetcode.editor.cn;
 // Related Topics 链表 
 // 👍 438 👎 0
 
-import com.wztlink1013.ds.linkedlist.LinkedList;
-
 public class P203RemoveLinkedListElements{
     public static void main(String[] args) {
         Solution solution = new P203RemoveLinkedListElements().new Solution();
