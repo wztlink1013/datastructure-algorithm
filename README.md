@@ -6,6 +6,9 @@
 ## About
 个人博客：[www.wztlink1013.com](https://www.wztlink1013.com/)
 
+- [www.wztlink1013.com/blog/categories/Algorithm/](https://www.wztlink1013.com/blog/categories/Algorithm/)
+- [www.wztlink1013.com/blog/categories/DataStructure/](https://www.wztlink1013.com/blog/categories/DataStructure/)
+
 ## Leetcode editor
 > 记录LeetCode插件配置
 
