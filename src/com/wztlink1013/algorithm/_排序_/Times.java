@@ -1,4 +1,4 @@
-package com.wztlink1013.algorithm.sort;
+package com.wztlink1013.algorithm._排序_;
 /*
  * 作用：测量代码运行时间
  */

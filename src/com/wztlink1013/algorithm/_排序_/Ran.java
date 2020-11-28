@@ -1,4 +1,4 @@
-package com.wztlink1013.algorithm.sort;
+package com.wztlink1013.algorithm._排序_;
 
 import java.util.Random;
 

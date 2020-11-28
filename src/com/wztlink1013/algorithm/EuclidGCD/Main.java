@@ -1,4 +1,9 @@
+/**
+ * 算法第一堂课
+ * 欧几里得(Eculid)最大公约数(GCD)算法
+ * */
 package com.wztlink1013.algorithm.EuclidGCD;
+
 import java.util.Scanner;
 
 public class Main {
