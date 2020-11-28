@@ -14,7 +14,7 @@
 
 - 勾选 Custom Template 和 Plugin Update
 - TempFilePath
-  > `D:\project-java\datastructure\src\com\wztlink1013\problems`
+  > `D:\project-java\datastructure-algorithm\src\com\wztlink1013\problems`
 - CodeFileName
   > `P${question.frontendQuestionId}$!velocityTool.camelCaseName(${question.titleSlug})`
 - CodeTemplate
