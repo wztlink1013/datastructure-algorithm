@@ -1,4 +1,5 @@
 .idea/
-datastructure-algorithm.iml
 .git/
+out/
+datastructure-algorithm.iml
 
