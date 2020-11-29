@@ -1,5 +1,11 @@
+# 不必要文件夹
 .idea/
 .git/
+.vscode/
 out/
+# 根目录下.iml文件
 datastructure-algorithm.iml
+# 所有后缀文件
+*.exe
+*.iml
 
