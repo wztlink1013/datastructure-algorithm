@@ -1,4 +1,4 @@
-package com.wztlink1013.algorithm._穷举法_;
+package com.wztlink1013.algorithm._穷举算法_;
 /**
 * 作用：百元买百兔
 * */

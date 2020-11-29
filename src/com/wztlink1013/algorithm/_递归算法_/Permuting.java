@@ -1,4 +1,4 @@
-package com.wztlink1013.algorithm._递归法_;
+package com.wztlink1013.algorithm._递归算法_;
 import java.util.ArrayList;
 
 /**

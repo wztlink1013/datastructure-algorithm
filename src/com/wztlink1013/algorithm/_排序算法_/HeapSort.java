@@ -1,4 +1,4 @@
-package com.wztlink1013.algorithm._排序_;
+package com.wztlink1013.algorithm._排序算法_;
 
 /**
  * fun：测试堆排序

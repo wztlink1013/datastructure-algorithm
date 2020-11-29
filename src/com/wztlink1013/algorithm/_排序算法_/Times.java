@@ -1,4 +1,4 @@
-package com.wztlink1013.algorithm._递归法_;
+package com.wztlink1013.algorithm._排序算法_;
 /*
  * 作用：测量代码运行时间
  */
