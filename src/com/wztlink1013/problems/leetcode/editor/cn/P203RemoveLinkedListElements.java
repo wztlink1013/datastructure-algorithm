@@ -17,14 +17,6 @@ public class P203RemoveLinkedListElements{
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 class Solution {
     public ListNode removeElements(ListNode head, int val) {
         // 将整个链表想象成head+子链表
@@ -36,7 +28,6 @@ class Solution {
         return head.val == val ? head.next : head;
     }
 }
-
 //leetcode submit region end(Prohibit modification and deletion)
 
 }

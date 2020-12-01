@@ -16,10 +16,16 @@ package com.wztlink1013.problems.leetcode.editor.cn;
 // Related Topics 数组 哈希表 
 // 👍 9028 👎 0
 
+import sun.awt.windows.WPrinterJob;
+
 public class P1TwoSum{
     public static void main(String[] args) {
         Solution solution = new P1TwoSum().new Solution();
-        
+        int [] nums = {2, 7, 11, 15};
+        solution.twoSum(nums, 9);
+        for (int i = 0;i<solution.twoSum(nums, 9).length;i++) {
+            System.out.println(solution.twoSum(nums, 9)[i]);
+        }
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)

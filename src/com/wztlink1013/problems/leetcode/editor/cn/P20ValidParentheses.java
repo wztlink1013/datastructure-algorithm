@@ -47,7 +47,10 @@ import java.util.Stack;
 public class P20ValidParentheses{
     public static void main(String[] args) {
         Solution solution = new P20ValidParentheses().new Solution();
-        
+        boolean result_1 = solution.isValid("([)]");
+        System.out.println(result_1);
+        boolean result_2 = solution.isValid("([])[]");
+        System.out.println(result_2);
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)

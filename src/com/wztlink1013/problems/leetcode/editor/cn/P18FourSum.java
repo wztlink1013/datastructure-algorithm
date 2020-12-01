@@ -34,7 +34,6 @@ import java.util.List;
 public class P18FourSum{
     public static void main(String[] args) {
         Solution solution = new P18FourSum().new Solution();
-        
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)

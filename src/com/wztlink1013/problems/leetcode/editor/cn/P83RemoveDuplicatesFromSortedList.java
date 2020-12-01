@@ -18,18 +18,10 @@ package com.wztlink1013.problems.leetcode.editor.cn;
 public class P83RemoveDuplicatesFromSortedList{
     public static void main(String[] args) {
         Solution solution = new P83RemoveDuplicatesFromSortedList().new Solution();
-        
+
     }
 
 //leetcode submit region begin(Prohibit modification and deletion)
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     int val;
- *     ListNode next;
- *     ListNode(int x) { val = x; }
- * }
- */
 class Solution {
     public ListNode deleteDuplicates(ListNode head) {
         // TODO: 快慢指针
