@@ -1,5 +1,6 @@
 package com.wztlink1013.problems.leetcode.editor.cn;
 
+// P224.基本计算器
 //实现一个基本的计算器来计算一个简单的字符串表达式的值。 
 //
 // 字符串表达式可以包含左括号 ( ，右括号 )，加号 + ，减号 -，非负整数和空格 。 
@@ -31,9 +32,9 @@ package com.wztlink1013.problems.leetcode.editor.cn;
 
 import java.util.Stack;
 
-public class P224基本计算器{
+public class P224BasicCalculator{
     public static void main(String[] args) {
-        Solution solution = new P224基本计算器().new Solution();
+        Solution solution = new P224BasicCalculator().new Solution();
         int key_1 = solution.calculate("7896979");
         int key_2 = solution.calculate("(23-2)-33+1111");
         System.out.println(key_1);
