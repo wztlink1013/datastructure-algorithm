@@ -8,22 +8,20 @@ public class Main {
 
     public static void main(String[] args) {
         ArrayList<Object> list  = new ArrayList<>();
+
         list.add(10);
+        list.add(130);
         list.add(new Person(10, "Jack"));
         list.add(22);
 
-        list.indexOf(new Person(10, "Jack"));
+        System.out.println("list: " + list.toString());
+        System.out.println("size of list: " + list.size());
+        System.out.println("130exit? : " + list.contains(130));
+        System.out.println("get 2 of index element : " + list.get(2));
 
+        Person a = new Person(10, "Jack");
+        System.out.println("test indexOf of Person: " + list.indexOf(a));
 
-//		ArrayList<Object> persons  = new ArrayList<>();
-//		persons.add(new Person(10, "Jack"));
-//		persons.add(null);
-//		persons.add(new Person(15, "Rose"));
-//		persons.add(null);
-//		persons.add(new Person(12, "James"));
-//		persons.add(null);
-//
-//		System.out.println(persons.indexOf(null));
     }
 
     static void test() {
