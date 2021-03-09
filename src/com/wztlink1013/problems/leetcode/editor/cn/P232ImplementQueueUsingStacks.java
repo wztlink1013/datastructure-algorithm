@@ -72,6 +72,7 @@ public class P232ImplementQueueUsingStacks{
     public void main(String[] args) {
         MyQueue myQueue = new MyQueue();
         //本地调试需要将MyQueue类和主函数加上静态static修饰字
+        //具体解释：https://www.cnblogs.com/dolphin0520/p/3799052.html
         myQueue.push(1); // queue is: [1]
         myQueue.push(2); // queue is: [1, 2] (leftmost is front of the queue)
         myQueue.pop();
