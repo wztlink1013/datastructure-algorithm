@@ -1,23 +1,29 @@
 #include<bits/stdc++.h>
 using namespace std;
 
+/**
+ * 单链表
+ * 
+ * 链表的基本操作：初始化、创建（前插、后插）、取值、查找、插值、删除、打印、逆置
+ */
+
+
+/* 单链表的存储结构 */
 typedef struct LNode {
-    int data;
-    struct LNode *next;
-}Lnode, *LinkList;
+    int data; //数据域
+    struct LNode *next; //指针域
+}Lnode, *LinkList; //LinkList为指向结构体LNode的指针类型
 
-LinkList L;
 
+/* 初始化链表 */
 void InitList(LinkList &L) {
     L = new LNode;
     L->next = NULL;
 }
 
-void CreateList_H(LinkList &L) {
+/* 创建：前插 */
+void CreateList_H(LinkList &L, int n) {
     InitList(L);
-    int n;
-    cout << "请输入要使用前插法插入的元素个数：";
-    cin >> n;
     for (int i = 0; i < n; i++){
         LNode *p = new LNode;
         cin >> p->data;
@@ -25,38 +31,49 @@ void CreateList_H(LinkList &L) {
         L->next = p;
     }
 }
-void TraverseList(LinkList &L){
-    LNode *p = new LNode;
-    p = L->next;
-    cout << "此链表打印的结果为："<<"\n";
-    while (p != NULL){
-        cout << p->data << " ";
-        p = p->next;
+
+/* 创建：后插 */
+void CreateList_R(LinkList &L, int n) {
+    cout << "请输入" << n << "个数字"<< "\n";
+    InitList(L);
+    // 定义一个在下面循环用来一直操作所加元素的结点p来指向头结点L
+    LinkList p = L;
+    for (int i = 0; i < n;i++) {
+        LinkList q = new Lnode;
+        q->next = NULL;
+        cin >> q->data;
+        p->next = q;
+        p = q; //为了下一次
     }
-    cout << "\n";
 }
-void GetElem(LinkList &L) {
-    int n;
-    cout << "请输入要查询的链表中第i个数：";
-    cin >> n;
-    LNode *p = new LNode;
-    p = L;
+
+/* 取值 */
+void GetElem(LinkList &L, int n) {
+    LinkList p = L;
     for (int i = 0; i < n;i++){
         p = p->next;
     }
-    cout << "查询的结果为：" << p->data<<"\n";
+    cout <<n<<"的值为：" << p->data<<"\n"<<"\n";
 }
-void ListInsert(LinkList &L){
-    LNode *p = new LNode;
-    p = L;
-    int n;
-    int e;
-    cout << "请分别输入要在第n个位置插入的e值：";
-    cin >> n>> e ;
+
+/* 查找 */
+void SearchElem(LinkList &L, int ele) {
+    LinkList p = L;
+    int count = 0;
+    while (p->data != ele) {
+        p = p->next;
+        count++;
+    }
+    cout <<ele<<"这个值的索引位置是："<< count<<"\n";
+}
+
+/* 插值：在第n个位置插入ele值*/
+void ListInsert(LinkList &L, int n, int ele){
+    LinkList p = L;
     for (int i = 0; i < n;i++) {
         if (n == i+1){
-            LNode *temp = new LNode;
-            temp->data = e;
+            LinkList temp = new LNode;
+            temp->data = ele;
             temp->next = p->next;
             p->next = temp;
             break;
@@ -65,12 +82,10 @@ void ListInsert(LinkList &L){
     }
     TraverseList(L); 
 }
-void ListDelete(LinkList &L){
-    cout << "请输入要删除的第j个位置的j值：";
-    LNode *p = new LNode;
-    p = L;
-    int j;
-    cin >> j;
+
+/* 删除：删除第j个位置的值 */
+void ListDelete(LinkList &L, int j){
+    LinkList p = L;
     for (int i = 0; i < j;i++) {
         if (j == i+1) {
             p->next = p->next->next;
@@ -80,6 +95,21 @@ void ListDelete(LinkList &L){
     }
     TraverseList(L);
 }
+
+/* 打印 */
+void TraverseList(LinkList & L){
+        LNode *p = new LNode;
+        p = L->next;
+        cout << "此链表打印的结果为："
+             << "\n";
+        while (p != NULL)
+        {
+            cout << p->data << " ";
+            p = p->next;
+        }
+        cout << "\n";
+}
+/* 逆置 */
 void ReverseList(LinkList &L) {
     LNode *p = L->next;             
     L->next = NULL;                
@@ -98,10 +128,12 @@ int main() {
     // LNode *test = new LNode;
     LinkList test;
     // struct LNode *test;
-    CreateList_H(test);//1
-    TraverseList(test);//1
-    // GetElem(test);//2
-    // ListInsert(test);//3
-    // ListDelete(test);//4
-    // ReverseList(test);//5
+    CreateList_R(test,4);
+    SearchElem(test, 3);
+    // cout << GetEle(test, 2);
+    // TraverseList(test);
+    // GetElem(test,2);
+    // ListInsert(test);
+    // ListDelete(test);
+    // ReverseList(test);
 }

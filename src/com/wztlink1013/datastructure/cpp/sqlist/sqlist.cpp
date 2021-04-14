@@ -2,14 +2,21 @@
 using namespace std;
 #define MAXSIZE 100
 
-typedef struct 
-{
+/**
+ * 顺序表
+ * 
+ * 顺序表的基本操作： 初始化、打印、取值、查找、插入、删除、升序、逆置
+ */
+
+
+/* 顺序表的存储形式就是连续存储空间，地址连续的，其实就是数组 */
+typedef struct {
     int *arr;
     int length;
 }SqList;
 
-SqList L;
 
+/* 初始化 */
 void InitList(SqList &L)
 {
     L.arr = new int[MAXSIZE];     
@@ -17,6 +24,7 @@ void InitList(SqList &L)
     L.length = 0;                     
 }
 
+/* 初始化添加元素 */
 void ListInsert(SqList &L) {
     cout << "请输入元素个数n：";
     int n;
@@ -26,6 +34,7 @@ void ListInsert(SqList &L) {
         L.length++;
     }
 }
+/* 打印 */
 void TraverseList(SqList &L) {
     cout << "该顺序表元素遍历结果为：";
     for (int i = 0; i < L.length;i++) {
@@ -33,6 +42,7 @@ void TraverseList(SqList &L) {
     }
     cout << "\n";
 }
+/* 最大值 */
 void NumberMax (SqList &L){
     cout << "该顺序表最大值为：";
     int max = L.arr[0];
@@ -42,6 +52,8 @@ void NumberMax (SqList &L){
     }
     cout << max<<"\n";
 }
+
+/* 插值 */
 void InsertOneElement (SqList &L) {
     cout << "请分别输入在n位置插入的e值：";
     int n;
@@ -55,6 +67,8 @@ void InsertOneElement (SqList &L) {
     cout << "\n"<<"插入值之后的顺序表为：";
     TraverseList(L);
 }
+
+/* 删除 */
 void DeleteOneElement (SqList &L) {
     cout << "请输入要删除n位置的n值：";
     int n;
@@ -68,6 +82,7 @@ void DeleteOneElement (SqList &L) {
     cout << "\n"<<"删除值之后的顺序表为：";
     TraverseList(L);
 }
+/* 升序 */
 void IncrList (SqList &L) {
     cout << "升序之后的顺序表为：";
     for (int i = 0; i < L.length;i++){
@@ -82,7 +97,7 @@ void IncrList (SqList &L) {
     }
     TraverseList(L);
 }
-
+/* 逆置 */
 void ReverseList (SqList &L) {
     cout << "逆序之后……";
     for (int i = 0; i < L.length / 2;i++){
@@ -93,6 +108,8 @@ void ReverseList (SqList &L) {
     }
     TraverseList(L);
 }
+
+
 int main () {
     SqList test;
     InitList(test);//1
