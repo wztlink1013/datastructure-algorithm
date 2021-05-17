@@ -20,7 +20,16 @@ void InitList(LinkList &L) {
     L = new LNode;
     L->next = NULL;
 }
-
+/* 打印 */
+void TraverseList(LinkList & L){
+        LinkList p = new LNode;
+        p = L->next;
+        cout << "此链表打印的结果为："<< "\n";
+        while (p != NULL) {
+            cout << p->data << " ";
+            p = p->next;
+        }
+}
 /* 创建：前插 */
 void CreateList_H(LinkList &L, int n) {
     InitList(L);
@@ -96,26 +105,13 @@ void ListDelete(LinkList &L, int j){
     TraverseList(L);
 }
 
-/* 打印 */
-void TraverseList(LinkList & L){
-        LNode *p = new LNode;
-        p = L->next;
-        cout << "此链表打印的结果为："
-             << "\n";
-        while (p != NULL)
-        {
-            cout << p->data << " ";
-            p = p->next;
-        }
-        cout << "\n";
-}
+
 /* 逆置 */
 void ReverseList(LinkList &L) {
     LNode *p = L->next;             
     L->next = NULL;                
-    while(p)                        
-    {
-        LNode *q = p->next;         
+    while(p) {
+        LinkList q = p->next;         
         p->next = L->next;          
         L->next = p;                
         p = q;                      
