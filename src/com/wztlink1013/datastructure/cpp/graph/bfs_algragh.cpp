@@ -75,6 +75,7 @@ void CreateUDG(ALGragh &G) {
 
 /**
  * 打印输出图
+ * TODO: 有bug
  */
 void Display(ALGragh &G) {
     for (int i = 0; i < G.vexnum;i++) {
@@ -97,6 +98,7 @@ void Display(ALGragh &G) {
 
 
 //----邻接表的BFS遍历----
+// TODO: 有bug
 
 bool visited[MVNum];
 
