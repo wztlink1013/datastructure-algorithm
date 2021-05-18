@@ -1,4 +1,5 @@
 #include<vector>
+#include<queue>
 #include<iostream>
 using namespace std;
 
@@ -23,4 +24,10 @@ int main() {
         }
         cout << "\n";
     }
+    cout << "==测试queue========================"
+        << "\n";
+    queue<int> Q;
+    Q.push(12);
+    Q.push(23);
+    cout << Q.front() << " " << Q.front()<<" "<<Q.empty()<<" "<<Q.size();
 }

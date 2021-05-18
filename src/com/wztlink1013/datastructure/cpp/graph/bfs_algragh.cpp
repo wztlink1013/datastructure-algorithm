@@ -8,7 +8,7 @@ typedef char VerTexType;
 typedef int OtherInfo;
 
 /**
- * 邻接表存储
+ * 邻接表的bfs代码
  */
 
 /**
@@ -96,8 +96,43 @@ void Display(ALGragh &G) {
 
 
 
+//----邻接表的BFS遍历----
+
+bool visited[MVNum];
+
+void BFS_AL(ALGragh &G, int v)
+{//按广度优先非递归遍历连通图G
+    cout<<v;
+    visited[v] = true;    //访问第v个顶点，并置访问标志数组相应分量值为true
+    ArcNode *p;    
+    queue<int> Q;
+    Q.push(v);
+    while(!Q.empty()) {
+        int u = Q.front();  //队头元素出队并置为u
+        Q.pop();
+        p = G.vertices[u].firstarc;   //p指向v的边链表的第一个边结点
+        while(p != NULL){
+            int w = p->adjvex;   //w是v的邻接点
+            if(!visited[w])   //如果w未访问
+                Q.push(w);
+            p = p->nextarc;  //p指向下一个结点
+        }
+    }
+}
+
+void BFSTraverse(ALGragh &G) {
+    //访问标志数组初始化
+    for(int v = 0; v < G.vexnum; v++)  
+        visited[v] = false;
+    //循环调用BFS
+    for(int v = 0; v < G.vexnum; v++)  
+        if(!visited[v])
+            BFS_AL(G, v); //对尚未访问的顶点调用BFS
+}
+
 int main() {
     ALGragh test;
     CreateUDG(test);
-    Display(test);
+    // Display(test);
+    BFSTraverse(test);
 }

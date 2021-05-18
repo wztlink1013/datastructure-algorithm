@@ -8,7 +8,7 @@ typedef char VerTexType;
 typedef int OtherInfo;
 
 /**
- * 邻接表存储
+ * 邻接表的dfs代码
  */
 
 /**
@@ -96,8 +96,37 @@ void Display(ALGragh &G) {
 
 
 
+//----邻接表的DFS遍历----
+bool visited[MVNum];                                                    //访问标志数组，其初值为false
+
+void DFS_AL(ALGragh G, int v)               
+{//图G为邻接表类型，从从第v个顶点出发深度优先搜索遍历图G
+    cout<<v;                                                            //访问第v个顶点，并置访问标志数组相应分量值为true
+    visited[v] = true;
+    ArcNode *p;                                                         
+    p = G.vertices[v].firstarc;                                         //p指向v的边链表的第一个边结点
+    while(p != NULL)
+    {
+       int w = p->adjvex;                                               //w是v的邻接点
+        if(!visited[w])                                                 //如果w未访问
+            DFS_AL(G, w);                                               //递归调用DFS_AL
+        p = p->nextarc;                                                 //p指向下一个结点
+    }
+}
+
+void DFSTraverse(ALGragh G)
+{//图G的储存类型任意，对非连通图G做深度优先遍历
+    for(int v = 0; v < G.vexnum; v++)                                   //访问标志数组初始化
+        visited[v] = false;
+    for(int v = 0; v < G.vexnum; v++)                                   //循环调用DFS
+        if(!visited[v])
+            DFS_AL(G, v);                                                  //对尚未访问的顶点调用DFS
+}
+
+
 int main() {
     ALGragh test;
     CreateUDG(test);
-    Display(test);
+    // Display(test);
+    DFSTraverse(test);
 }
