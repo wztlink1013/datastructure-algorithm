@@ -28,13 +28,13 @@ typedef struct VNode {   //顶点信息
 typedef struct {
     AdjList vertices;
     int vexnum, arcnum; //图当前的顶点数和边数
-}ALGragh; //邻接表（Adjacency List）
+}ALGraph; //邻接表（Adjacency List）
 
 
 /**
  * 找到v顶点在图的顶点数组中的位置
  */
-int LocateVex(ALGragh &G, char v) {
+int LocateVex(ALGraph &G, char v) {
     for (int i = 0; i < G.vexnum;i++) {
         if (v == G.vertices[i].data) {
             return i;
@@ -45,7 +45,7 @@ int LocateVex(ALGragh &G, char v) {
 /**
  * 邻接表创建无向图
  */
-void CreateUDG(ALGragh &G) {
+void CreateUDG(ALGraph &G) {
     cout << "请输入顶点数和边数：" << endl;
     cin >> G.vexnum >> G.arcnum; // 邻接表的顶点数和边数
     // 初始化顶点数组
@@ -69,15 +69,14 @@ void CreateUDG(ALGragh &G) {
         ArcNode *p2 = new ArcNode;
         p2->adjvex = i;
         p2->nextarc = G.vertices[j].firstarc;
-        G.vertices[j].firstarc = p1;
+        G.vertices[j].firstarc = p2;
     }
 }
 
 /**
  * 打印输出图
- * TODO: 有bug
  */
-void Display(ALGragh &G) {
+void Display(ALGraph &G) {
     for (int i = 0; i < G.vexnum;i++) {
         cout << "结点" << i << "：";
         // 复制选中的节点数组中的结点
@@ -98,31 +97,47 @@ void Display(ALGragh &G) {
 
 
 //----邻接表的BFS遍历----
-// TODO: 有bug
 
 bool visited[MVNum];
 
-void BFS_AL(ALGragh &G, int v)
-{//按广度优先非递归遍历连通图G
-    cout<<v;
-    visited[v] = true;    //访问第v个顶点，并置访问标志数组相应分量值为true
-    ArcNode *p;    
+int FirstAdjvex(ALGraph& G, int u)
+{
+    int w = G.vertices[u].firstarc->adjvex;
+    return w;
+}
+int NextAdjVex(ALGraph& G, int u, int w)
+{
+    ArcNode *temp = G.vertices[u].firstarc;
+    while (temp->adjvex != w)
+    {
+        temp = temp->nextarc;
+    }
+    if (temp->nextarc)
+        return temp->nextarc->adjvex;
+    else 
+        return -1;
+    delete temp;
+}
+void BFS_AL(ALGraph& G, int v){
+    cout << v;
+    visited[v] = true;
     queue<int> Q;
     Q.push(v);
-    while(!Q.empty()) {
-        int u = Q.front();  //队头元素出队并置为u
+    int u = v;
+    while (!Q.empty()){
+        u = Q.front();
         Q.pop();
-        p = G.vertices[u].firstarc;   //p指向v的边链表的第一个边结点
-        while(p != NULL){
-            int w = p->adjvex;   //w是v的邻接点
-            if(!visited[w])   //如果w未访问
+        for (int w = FirstAdjvex(G, u); w >= 0; w = NextAdjVex(G, u, w)){
+            if (!visited[w]){
+                cout <<w; 
+                visited[w] = true;
                 Q.push(w);
-            p = p->nextarc;  //p指向下一个结点
+            }
         }
     }
 }
 
-void BFSTraverse(ALGragh &G) {
+void BFSTraverse(ALGraph &G) {
     //访问标志数组初始化
     for(int v = 0; v < G.vexnum; v++)  
         visited[v] = false;
@@ -133,8 +148,8 @@ void BFSTraverse(ALGragh &G) {
 }
 
 int main() {
-    ALGragh test;
+    ALGraph test;
     CreateUDG(test);
-    // Display(test);
+    Display(test);
     BFSTraverse(test);
 }

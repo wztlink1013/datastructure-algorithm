@@ -33,8 +33,11 @@ int main() {
     queue<int> Q;
     Q.push(12);
     Q.push(23);
-    cout << Q.front() << " " 
-        << Q.front()<<" "
-        <<Q.empty()<<" "
-        <<Q.size();
+    cout << Q.front()<<endl;
+    Q.pop();
+    cout <<"空了吗："<< Q.empty()<<"size数量："<<Q.size()<<endl;
+    cout << Q.front()<<endl;
+    Q.pop();
+    cout <<"空了吗："<< Q.empty()<<"size数量："<<Q.size()<<endl;
+
 }
