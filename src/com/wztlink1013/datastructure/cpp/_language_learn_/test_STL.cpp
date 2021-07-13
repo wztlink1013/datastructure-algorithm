@@ -1,11 +1,37 @@
 #include<vector>
+#include<list>
 #include<queue>
 #include<iostream>
+#include<algorithm>
 using namespace std;
 
 /**
  * 笔记：https://www.wztlink1013.com/blog/porzdi/
  */
+template <class T1, class T2>
+void sum(T1 x, T2 y) {
+    cout << sizeof(x + y);
+}
+template <class T>
+T result(list<T> L, T key) {
+    typename list<T>::iterator p;
+    int count = 0;
+    for (p = L.begin();p!=L.end();p++) {
+        if (*p == key) {
+            break;
+        }
+        p++;
+        if (p == L.end()) {
+            count = -1;
+            break;
+        }
+        p--;
+        count++;
+    }
+    return count;
+}
+
+
 
 int main() {
     cout << "==测试vector============================="<< "\n";
@@ -39,5 +65,9 @@ int main() {
     cout << Q.front()<<endl;
     Q.pop();
     cout <<"空了吗："<< Q.empty()<<"size数量："<<Q.size()<<endl;
-
+    cout << "==测试STL中的函数模板============================="<< "\n";
+    sum('1', 99.0);
+    list<int> L = {2, 5, 2, 7, 4, 7, 33, 5};
+    cout<< "\n课后编程题第一题："<<result(L, 50);
+    
 }
