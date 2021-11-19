@@ -1,4 +1,6 @@
 ## Content
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwztlink1013%2Fdatastructure-algorithm.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwztlink1013%2Fdatastructure-algorithm?ref=badge_shield)
+
 - 数据结构 [./src/com/wztlink1013/datastructure](./src/com/wztlink1013/datastructure)
 - 算法分析与设计 [./src/com/wztlink1013/algorithm](./src/com/wztlink1013/algorithm)
 - 编程刷题 [./src/com/wztlink1013/problems](./src/com/wztlink1013/problems)
@@ -116,3 +118,6 @@
     }]
 }
 ```
+
+## License
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fwztlink1013%2Fdatastructure-algorithm.svg?type=large)](https://app.fossa.com/projects/git%2Bgithub.com%2Fwztlink1013%2Fdatastructure-algorithm?ref=badge_large)
