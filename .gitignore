@@ -3,6 +3,7 @@
 .git/
 .vscode/
 out/
+node_modules
 # 根目录下.iml文件
 datastructure-algorithm.iml
 # 所有后缀文件
