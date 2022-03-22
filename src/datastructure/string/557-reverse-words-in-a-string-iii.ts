@@ -1,8 +1,9 @@
 /*
  * @Author: wztlink1013
  * @Date: 2022-03-21 19:04:14
- * @LastEditTime: 2022-03-21 20:39:41
- * @Description: https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/
+ * @LastEditTime: 2022-03-22 19:32:21
+ * @Description: 557. 反转字符串中的单词 III
+ * https://leetcode-cn.com/problems/reverse-words-in-a-string-iii/
  */
 
 function reverseWords(s: string): string {
