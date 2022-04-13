@@ -1,6 +1,8 @@
 name: CI for leetcode
 
-on: [watch]
+on:
+  schedule:
+    - cron:  '0 5 * * *'
 
 jobs:
   build:
