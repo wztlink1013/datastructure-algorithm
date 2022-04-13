@@ -19,7 +19,5 @@ jobs:
           TOKEN_GITHUBAPI: ${{ secrets.TOKEN_GITHUBAPI }}
         run: |
           npm install
-          npm audit fix --force
-          npm install
-          nodemon _leetcode.js --GITHUB_TOKEN=${{ secrets.TOKEN_GITHUBAPI }}
+          # nodemon _leetcode.js --GITHUB_TOKEN=${{ secrets.TOKEN_GITHUBAPI }}
     
