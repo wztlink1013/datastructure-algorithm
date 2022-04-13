@@ -2,7 +2,7 @@ name: CI for leetcode
 
 on:
   schedule:
-    - cron:  '0 5 * * *'
+    - cron:  '59 0 * * *'
 
 jobs:
   build:
