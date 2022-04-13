@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: Checkout Repository main branch
         uses: actions/checkout@main 
-      - name: Setup Node.js 10.x 
+      - name: Setup Node.js 14.x 
         uses: actions/setup-node@main
         with:
           node-version: "14.x"
@@ -19,6 +19,7 @@ jobs:
           TOKEN_GITHUBAPI: ${{ secrets.TOKEN_GITHUBAPI }}
         run: |
           npm install
-          npm audit fix
+          npm audit fix --force
+          npm install
           nodemon _leetcode.js --GITHUB_TOKEN=${{ secrets.TOKEN_GITHUBAPI }}
     
